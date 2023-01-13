@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: studentsapi-container
-          image: ansziyad5/restapi:1.0
+          image: courses
           livenessProbe:
             initialDelaySeconds: 1
             httpGet:
