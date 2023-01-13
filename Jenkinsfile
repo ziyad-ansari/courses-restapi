@@ -23,7 +23,7 @@ pipeline {
         stage('deploy on k8s') {
             steps {
                 sh "cd deployments/courses/overlays/dev && kustomize edit set image courses=ansziyad5/courses:dev-$env.BUILD_ID"
-                sh 'kubectl apply -k deployments/courses/overlays/develop'
+                sh 'kubectl apply -k deployments/courses/overlays/dev'
             }
         }
     }
